@@ -5,79 +5,67 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Adi &amp; Marchi Advogados Associados</title>
 <meta name="robots" content="noindex">
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root { --ink:#161616; --muted:#5f5c57; --line:#e6e2da; --paper:#f6f4f0; --white:#fff; }
+:root { --ink:#161616; --muted:#5e5b56; --line:#e7e2d9; }
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { margin: 0; color: var(--ink); background: var(--white); font-family: Manrope, Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.5; }
+body { margin: 0; color: var(--ink); background: #fff; font-family: Manrope, Helvetica, Arial, sans-serif; }
 a { color: inherit; text-decoration: none; }
 img { width: 100%; height: 100%; object-fit: cover; display: block; }
-header { position: sticky; top: 0; z-index: 8; background: rgba(255,255,255,.94); border-bottom: 1px solid var(--line); }
-.bar { max-width: 1240px; margin: 0 auto; padding: 16px 28px; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
-.mark { font-family: Newsreader, Georgia, serif; font-size: 22px; letter-spacing: -0.02em; }
-.mark small { display: block; font-family: Manrope, sans-serif; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-top: 2px; }
-nav { display: flex; gap: 22px; font-size: 13px; letter-spacing: .04em; }
-.hero { position: relative; height: 86vh; min-height: 560px; background: #d7d2c8; }
-.hero-card { position: absolute; left: 28px; bottom: 28px; max-width: 560px; background: var(--white); padding: 32px 32px 28px; }
-.kicker { margin: 0 0 12px; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
-h1 { margin: 0 0 14px; font-family: Newsreader, Georgia, serif; font-weight: 400; font-size: clamp(34px, 4.4vw, 54px); line-height: 1.05; letter-spacing: -0.03em; }
+header { position: sticky; top: 0; z-index: 5; background: rgba(255,255,255,.94); border-bottom: 1px solid var(--line); }
+.bar { max-width: 1240px; margin: 0 auto; padding: 16px 22px; display: flex; justify-content: space-between; gap: 16px; align-items: center; }
+.mark { font-family: Newsreader, Georgia, serif; font-size: 22px; }
+.mark small { display: block; font-family: Manrope, sans-serif; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+nav { display: flex; flex-wrap: wrap; gap: 16px; font-size: 13px; }
+.hero { position: relative; height: 78vh; min-height: 520px; background: #ddd; }
+.card { position: absolute; left: 20px; bottom: 20px; right: 20px; max-width: 560px; background: #fff; padding: 28px; }
+h1 { margin: 0 0 10px; font-family: Newsreader, Georgia, serif; font-weight: 400; font-size: clamp(32px, 5vw, 52px); line-height: 1.05; letter-spacing: -.03em; }
+.kicker { margin: 0 0 10px; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
 .lede { margin: 0; color: var(--muted); }
-.wrap { max-width: 1240px; margin: 0 auto; padding: 0 28px; }
-.label { display: flex; justify-content: space-between; align-items: baseline; padding: 64px 0 18px; border-bottom: 1px solid var(--ink); }
+.wrap { max-width: 1240px; margin: 0 auto; padding: 28px 22px 48px; }
+.label { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--ink); padding: 28px 0 14px; }
 .label h2 { margin: 0; font-family: Newsreader, Georgia, serif; font-weight: 400; font-size: 32px; }
-.label span { color: var(--muted); font-size: 13px; }
-.mosaic { display: grid; grid-template-columns: 1.4fr 1fr; gap: 14px; padding: 18px 0 10px; }
-.stack { display: grid; gap: 14px; }
-.tile { position: relative; min-height: 240px; background: #ddd; overflow: hidden; }
-.tile.tall { min-height: 520px; }
-.tile figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 18px 16px; color: white; background: linear-gradient(transparent, rgba(0,0,0,.55)); }
-.tile strong { display: block; font-family: Newsreader, Georgia, serif; font-size: 26px; font-weight: 400; }
-.tile span { font-size: 13px; }
-.index { display: grid; grid-template-columns: 1fr 1fr; }
-.group { padding: 28px 28px 8px 0; }
-.group + .group { border-left: 1px solid var(--line); padding-left: 28px; }
-.group h3 { margin: 0 0 8px; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
-.area { display: grid; grid-template-columns: 1fr auto; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--line); }
-.area b { font-weight: 600; }
-.area p { margin: 3px 0 0; color: var(--muted); font-size: 14px; }
-.area em { font-style: normal; color: var(--muted); font-size: 12px; }
-.people { display: grid; grid-template-columns: 1fr 1fr 1fr; padding-bottom: 48px; }
-.person { padding: 22px 18px 22px 0; border-bottom: 1px solid var(--line); }
-.person strong { display: block; }
-.person span, .person small { display: block; color: var(--muted); font-size: 13px; }
-.contact { margin: 10px 28px 48px; background: var(--ink); color: var(--paper); display: grid; grid-template-columns: 1.4fr .8fr; gap: 24px; padding: 42px; }
-.contact h2 { margin: 0 0 8px; font-family: Newsreader, Georgia, serif; font-weight: 400; font-size: 40px; }
-.contact p { margin: 0; color: #c9c4ba; }
-.contact a { display: inline-block; margin-top: 18px; border-bottom: 1px solid #c9c4ba; }
-footer { max-width: 1240px; margin: 0 auto; padding: 8px 28px 36px; color: var(--muted); font-size: 12px; display: flex; justify-content: space-between; gap: 16px; }
-@media (max-width: 860px) {
-.bar { padding: 14px 16px; align-items: flex-start; flex-direction: column; }
-nav { flex-wrap: wrap; gap: 14px 16px; }
-.hero { height: 78vh; min-height: 520px; }
-.hero-card { left: 12px; right: 12px; bottom: 12px; max-width: none; padding: 22px; }
-.wrap { padding: 0 16px; }
-.mosaic, .index, .people, .contact { grid-template-columns: 1fr; }
-.tile.tall { min-height: 280px; }
-.group + .group { border-left: 0; padding-left: 0; }
-.contact { margin: 0 16px 28px; }
-footer { padding: 8px 16px 28px; flex-direction: column; }
-}
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px 18px; padding-top: 22px; }
+figure { margin: 0; }
+.photo { height: 280px; background: #e6e1d8; overflow: hidden; }
+figcaption { padding: 12px 2px 0; }
+figcaption b { display: block; font-size: 18px; }
+figcaption span { color: var(--muted); font-size: 14px; }
+.people { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+.person { padding: 16px 12px 16px 0; border-bottom: 1px solid var(--line); }
+.person small, .person span { display: block; color: var(--muted); font-size: 13px; }
+.contact { margin: 28px 22px; background: var(--ink); color: #f6f4f0; padding: 36px; }
+.contact h2 { margin: 8px 0; font-family: Newsreader, Georgia, serif; font-weight: 400; font-size: 36px; }
+.contact a { border-bottom: 1px solid #c9c4ba; }
+footer { max-width: 1240px; margin: 0 auto; padding: 0 22px 32px; color: var(--muted); font-size: 12px; }
+@media (max-width: 760px) { .bar { flex-direction: column; align-items: flex-start; } .grid, .people { grid-template-columns: 1fr; } .photo { height: 230px; } .card { left: 12px; right: 12px; bottom: 12px; } }
 </style>
 </head>
 <body>
-<header><div class="bar"><a class="mark" href="#topo">Adi &amp; Marchi<small>Advogados Associados</small></a><nav><a href="#escritorio">O escritório</a><a href="#atuacao">Áreas</a><a href="#advogados">Advogados</a><a href="#contato">Contato</a></nav></div></header>
-<section class="hero" id="topo"><img src="https://litter.catbox.moe/0ax1rc.jpg" alt="Centro empresarial."><div class="hero-card" id="escritorio"><p class="kicker">São Paulo</p><h1>Advocacia para empresas, patrimônio e operações.</h1><p class="lede">Atuação direta dos sócios em societário, tributário, imobiliário, agronegócio, crédito e contencioso, com as demais frentes do escritório no mesmo acompanhamento.</p></div></section>
-<div class="wrap">
-<div class="label" id="atuacao"><h2>Áreas de atuação</h2><span>16 frentes</span></div>
-<div class="mosaic"><figure class="tile tall"><img src="https://litter.catbox.moe/g27a1u.jpg" alt="Silos e lavoura."><figcaption><strong>Agronegócio</strong><span>Custeio, investimento e operações rurais.</span></figcaption></figure><div class="stack"><figure class="tile"><img src="https://litter.catbox.moe/sqg2h2.jpg" alt="Torres em construção."><figcaption><strong>Imobiliário</strong><span>Aquisição, desenvolvimento e regularização.</span></figcaption></figure><figure class="tile"><img src="https://litter.catbox.moe/ystgr6.jpg" alt="Porto e contêineres."><figcaption><strong>Aduaneiro e internacional</strong><span>Comércio exterior e operações transfronteiriças.</span></figcaption></figure></div></div>
-<div class="mosaic"><figure class="tile"><img src="https://litter.catbox.moe/26tcrz.jpg" alt="Fachada institucional."><figcaption><strong>Tributário</strong><span>Empresa e patrimônio.</span></figcaption></figure><figure class="tile"><img src="https://litter.catbox.moe/a9d9nd.jpg" alt="Galpão industrial."><figcaption><strong>Trabalhista</strong><span>Consultoria e contencioso da empresa.</span></figcaption></figure></div>
-<div class="index"><div class="group"><h3>Empresa</h3><div class="area"><div><b>Societário</b><p>Sociedades, acordos de sócios e reorganização.</p></div><em>01</em></div><div class="area"><div><b>Contratos</b><p>Negociação e revisão de contratos empresariais.</p></div><em>02</em></div><div class="area"><div><b>Comercial e contencioso cível</b><p>Consultoria e litígio empresarial.</p></div><em>03</em></div><div class="area"><div><b>Bancário</b><p>Crédito, garantias e renegociação.</p></div><em>04</em></div><div class="area"><div><b>Cobrança</b><p>Recuperação de crédito.</p></div><em>05</em></div><div class="area"><div><b>Agronegócio</b><p>Custeio, investimento e operações rurais.</p></div><em>06</em></div><div class="area"><div><b>Aduaneiro e direito internacional</b><p>Comércio exterior e contratos internacionais.</p></div><em>07</em></div><div class="area"><div><b>Ambiental</b><p>Licenciamento e passivo ambiental.</p></div><em>08</em></div></div><div class="group"><h3>Patrimônio, pessoas e Estado</h3><div class="area"><div><b>Imobiliário</b><p>Aquisição, desenvolvimento e regularização.</p></div><em>09</em></div><div class="area"><div><b>Família e sucessões</b><p>Patrimônio, holding e sucessão.</p></div><em>10</em></div><div class="area"><div><b>Tributário</b><p>Consultoria tributária da empresa e do patrimônio.</p></div><em>11</em></div><div class="area"><div><b>Trabalhista</b><p>Consultoria e contencioso trabalhista.</p></div><em>12</em></div><div class="area"><div><b>Previdenciário</b><p>Planejamento e contencioso previdenciário.</p></div><em>13</em></div><div class="area"><div><b>Administrativo</b><p>Relações com a Administração Pública.</p></div><em>14</em></div><div class="area"><div><b>Consumidor</b><p>Relações de consumo da empresa.</p></div><em>15</em></div><div class="area"><div><b>Eleitoral</b><p>Consultoria eleitoral.</p></div><em>16</em></div></div></div>
+<header><div class="bar"><a class="mark" href="#topo">Adi &amp; Marchi<small>Advogados Associados</small></a><nav><a href="#atuacao">Áreas</a><a href="#advogados">Advogados</a><a href="#contato">Contato</a></nav></div></header>
+<section class="hero" id="topo"><img src="https://litter.catbox.moe/ae4fyl.jpg" alt="Centro empresarial."><div class="card"><p class="kicker">São Paulo</p><h1>Advocacia para empresas, patrimônio e operações.</h1><p class="lede">Dezesseis frentes. Cada uma com o seu campo visual. Acompanhamento direto dos sócios.</p></div></section>
+<div class="wrap" id="atuacao"><div class="label"><h2>Áreas de atuação</h2><span>16</span></div>
+<div class="grid">
+<figure><div class="photo"><img src="https://litter.catbox.moe/u4q85y.jpg" alt="Sala de reunião."></div><figcaption><b>Societário</b><span>Sociedades, acordos de sócios e reorganização.</span></figcaption></figure>
+<figure><div class="photo"><img src="https://litter.catbox.moe/oyrykk.jpg" alt="Mesa e pastas fechadas."></div><figcaption><b>Contratos</b><span>Negociação e revisão de contratos empresariais.</span></figcaption></figure>
+<figure><div class="photo"><img src="https://litter.catbox.moe/kyz0re.jpg" alt="Colunata de pedra."></div><figcaption><b>Comercial e contencioso cível</b><span>Consultoria e litígio empresarial.</span></figcaption></figure>
+<figure><div class="photo"><img src="https://litter.catbox.moe/xvt5bq.jpg" alt="Rua entre torres."></div><figcaption><b>Bancário</b><span>Crédito, garantias e renegociação.</span></figcaption></figure>
+<figure><div class="photo"><img src="https://litter.catbox.moe/m523si.jpg" alt="Porta de pedra e bronze."></div><figcaption><b>Cobrança</b><span>Recuperação de crédito.</span></figcaption></figure>
+<figure><div class="photo"><img src="https://litter.catbox.moe/hfu5vn.jpg" alt="Silos e lavoura."></div><figcaption><b>Agronegócio</b><span>Custeio, investimento e operações rurais.</span></figcaption></figure>
+<figure><div class="photo"><img src="https://litter.catbox.moe/28r2mk.jpg" alt="Porto e contêineres."></div><figcaption><b>Aduaneiro e direito internacional</b><span>Comércio exterior e contratos internacionais.</span></figcaption></figure>
+<figure><div class="photo"><img src="https://litter.catbox.moe/d8b7n3.jpg" alt="Rio e mata."></div><figcaption><b>Ambiental</b><span>Licenciamento e passivo ambiental.</span></figcaption></figure>
+<figure><div class="photo"><img src="https://litter.catbox.moe/hs51wj.jpg" alt="Torres em obra."></div><figcaption><b>Imobiliário</b><span>Aquisição, desenvolvimento e regularização.</span></figcaption></figure>
+<figure><div class="photo"><img src="https://litter.catbox.moe/6lyhvy.jpg" alt="Casa de campo."></div><figcaption><b>Família e sucessões</b><span>Patrimônio, holding e sucessão.</span></figcaption></figure>
+<figure><div class="photo"><img src="https://litter.catbox.moe/iod1y4.jpg" alt="Fachada de concreto."></div><figcaption><b>Tributário</b><span>Empresa e patrimônio.</span></figcaption></figure>
+<figure><div class="photo"><img src="https://litter.catbox.moe/oiniez.jpg" alt="Galpão industrial."></div><figcaption><b>Trabalhista</b><span>Consultoria e contencioso da empresa.</span></figcaption></figure>
+<figure><div class="photo"><img src="https://litter.catbox.moe/rs4sr6.jpg" alt="Salão cívico vazio."></div><figcaption><b>Previdenciário</b><span>Planejamento e contencioso previdenciário.</span></figcaption></figure>
+<figure><div class="photo"><img src="https://litter.catbox.moe/1zocvw.jpg" alt="Prédio cívico e espelho d'água."></div><figcaption><b>Administrativo</b><span>Relações com a Administração Pública.</span></figcaption></figure>
+<figure><div class="photo"><img src="https://litter.catbox.moe/rhokmp.jpg" alt="Galeria de pedra vazia."></div><figcaption><b>Consumidor</b><span>Relações de consumo da empresa.</span></figcaption></figure>
+<figure><div class="photo"><img src="https://litter.catbox.moe/7z6p5c.jpg" alt="Plenário vazio."></div><figcaption><b>Eleitoral</b><span>Consultoria eleitoral.</span></figcaption></figure>
+</div>
 <div class="label" id="advogados"><h2>Advogados</h2><span>Sócios e associados</span></div>
 <section class="people"><div class="person"><strong>Mohamed Adi Neto</strong><span>Sócio</span><small>OAB/SP 229.156</small></div><div class="person"><strong>Lucas Henrique Izidoro Marchi</strong><span>Sócio</span><small>OAB/SP 272.696</small></div><div class="person"><strong>Lillian Ponchio e Silva</strong><span>Advogada associada</span><small>OAB/SP 273.603</small></div><div class="person"><strong>Ana Camila Caetano da Silveira Campanelli</strong><span>Advogada associada</span><small>OAB/SP 238.575</small></div><div class="person"><strong>Caio Eduardo de Menezes Faria</strong><span>Advogado associado</span><small>OAB/SP 441.829</small></div></section>
 </div>
-<section class="contact" id="contato"><div><p class="kicker" style="color:#b7b2a8">Contato</p><h2>Fale com o escritório.</h2><p>Sem agenda automática e sem avaliação promocional.</p><a href="mailto:m.adi@adimarchi.com.br">m.adi@adimarchi.com.br</a></div><p>São Paulo</p></section>
-<footer><span>Modelo de direção visual. Não é o site publicado.</span><span>Fotografias ilustrativas, a substituir por acervo licenciado.</span></footer>
-</body>
-</html>
+<section class="contact" id="contato"><p class="kicker">Contato</p><h2>Fale com o escritório.</h2><a href="mailto:m.adi@adimarchi.com.br">m.adi@adimarchi.com.br</a></section>
+<footer>Modelo de direção. Fotos ilustrativas, a substituir por acervo licenciado.</footer>
+</body></html>
